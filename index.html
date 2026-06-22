@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fazal Khan | Premium Mobile & Web Portfolio</title>
+    <meta name="description" content="Portfolio of Fazal Khan, a software developer specializing in high-performance Flutter mobile apps and collaborative React web platforms.">
+    
+    <!-- Google Fonts: Outfit & Fira Code -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Decorative Glowing Background Orbs -->
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+    <div class="glow-orb orb-3"></div>
+
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-accent">&lt;</span>Fazal.K<span class="logo-accent">/&gt;</span>
+            </a>
+            
+            <nav class="nav-links">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="#contact" class="btn btn-sm btn-outline">Hire Me</a>
+                <button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer Navigation -->
+    <div class="mobile-drawer" id="mobileDrawer">
+        <a href="#about" class="drawer-link">About</a>
+        <a href="#projects" class="drawer-link">Projects</a>
+        <a href="#skills" class="drawer-link">Skills</a>
+        <a href="#contact" class="drawer-link">Contact</a>
+        <a href="#contact" class="btn btn-outline" style="margin-top: 2rem;">Hire Me</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="about">
+        <div class="hero-content">
+            <div class="badge-container">
+                <span class="badge"><span class="badge-dot"></span> Available for Opportunities</span>
+            </div>
+            
+            <h1 class="hero-title">
+                Building <span class="text-gradient">Premium</span> Mobile & Web Solutions
+            </h1>
+            
+            <p class="hero-subtitle">
+                Hi, I'm <strong>Fazal Khan</strong>. I specialize in designing and engineering high-performance mobile applications using Flutter and responsive, collaborative web suites powered by React and WebSockets.
+            </p>
+
+            <div class="hero-actions">
+                <a href="#projects" class="btn btn-primary">
+                    View My Work <i data-lucide="arrow-down" class="icon-right"></i>
+                </a>
+                <a href="#contact" class="btn btn-outline">
+                    Get In Touch <i data-lucide="mail" class="icon-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-visual">
+            <div class="mockup-container">
+                <div class="mockup-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                    <span class="mockup-title">FazalKhan.dev</span>
+                </div>
+                <div class="mockup-body">
+                    <pre><code><span class="code-keyword">const</span> developer = {
+  name: <span class="code-string">'Fazal Khan'</span>,
+  skills: [<span class="code-string">'Flutter'</span>, <span class="code-string">'React'</span>, <span class="code-string">'Node.js'</span>, <span class="code-string">'PostgreSQL'</span>],
+  focus: <span class="code-string">'Offline-First & Collaborative Architectures'</span>,
+  motto: <span class="code-string">'Pixel perfection, robust performance'</span>
+};
+
+<span class="code-keyword">function</span> buildApp(developer) {
+  <span class="code-keyword">return</span> developer.skills
+    .map(tech => <span class="code-string">`Stunning ${tech} App`</span>)
+    .join(<span class="code-string">' & '</span>);
+}</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section" id="projects">
+        <div class="section-header">
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-description">A curated selection of applications spanning desktop-grade web clients and native mobile apps.</p>
+            
+            <!-- Category Filters -->
+            <div class="filter-tabs">
+                <button class="filter-tab active" data-filter="all">All Projects</button>
+                <button class="filter-tab" data-filter="web">Web Platforms</button>
+                <button class="filter-tab" data-filter="mobile">Flutter Apps</button>
+            </div>
+        </div>
+
+        <div class="projects-grid" id="projectsGrid">
+            
+            <!-- Project 1: OfficeNexus -->
+            <div class="project-card" data-category="web">
+                <div class="card-glow" style="background: radial-gradient(800px circle at var(--x, 0) var(--y, 0), rgba(139, 92, 246, 0.15), transparent 40%);"></div>
+                <div class="project-header">
+                    <div class="project-icon icon-purple">
+                        <i data-lucide="briefcase"></i>
+                    </div>
+                    <span class="project-tag">Web Platform</span>
+                </div>
+                <h3 class="project-title">OfficeNexus</h3>
+                <p class="project-summary">A real-time collaborative cloud office suite supporting live rich-text document editors, multi-sheet spreadsheets, and interactive presentation builders.</p>
+                
+                <div class="tech-tags">
+                    <span class="tech-tag">React 19</span>
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">Socket.io</span>
+                    <span class="tech-tag">Prisma</span>
+                    <span class="tech-tag">PostgreSQL</span>
+                </div>
+
+                <div class="collapsible-details">
+                    <button class="details-toggle">
+                        <span>Key Implementation Details</span> <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="details-content">
+                        <ul>
+                            <li><strong>Real-time Synchronizations</strong>: Instant updates and document presence powered by custom Socket.io rooms.</li>
+                            <li><strong>Rich-Text Engine</strong>: WYSIWYG editor via TipTap/ProseMirror with custom table handling and PDF/Word exports.</li>
+                            <li><strong>Database ORM</strong>: Relational database management with Prisma, supporting files, folders, shares, and versions.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-links">
+                    <a href="https://github.com/fazal-khn/officenexus-frontend" target="_blank" class="project-link link-github">
+                        <i data-lucide="github"></i> GitHub
+                    </a>
+                    <a href="https://officenexus.vercel.app" target="_blank" class="project-link link-demo">
+                        <i data-lucide="external-link"></i> Live Demo
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 2: allpdf.online -->
+            <div class="project-card" data-category="web">
+                <div class="card-glow" style="background: radial-gradient(800px circle at var(--x, 0) var(--y, 0), rgba(6, 182, 212, 0.15), transparent 40%);"></div>
+                <div class="project-header">
+                    <div class="project-icon icon-cyan">
+                        <i data-lucide="file-text"></i>
+                    </div>
+                    <span class="project-tag">Web Platform</span>
+                </div>
+                <h3 class="project-title">allpdf.online</h3>
+                <p class="project-summary">A 100% private, client-side offline PDF and document utility suite. Processes files entirely within the browser sandbox with no server uploads.</p>
+                
+                <div class="tech-tags">
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">TypeScript</span>
+                    <span class="tech-tag">Tailwind v4</span>
+                    <span class="tech-tag">pdf-lib</span>
+                    <span class="tech-tag">Tesseract</span>
+                </div>
+
+                <div class="collapsible-details">
+                    <button class="details-toggle">
+                        <span>Key Implementation Details</span> <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="details-content">
+                        <ul>
+                            <li><strong>100% Client-Side Processing</strong>: Merging, splitting, signatures, and converters work fully in-memory via WASM.</li>
+                            <li><strong>Local OCR Engine</strong>: Text extraction from scanned documents done locally using Tesseract.js Web Workers.</li>
+                            <li><strong>Offline PWA Support</strong>: Service workers cache static assets allowing utility use with zero network connectivity.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-links">
+                    <a href="https://github.com/fazal-khn/allpdf-online" target="_blank" class="project-link link-github">
+                        <i data-lucide="github"></i> GitHub
+                    </a>
+                    <a href="https://allpdf.online" target="_blank" class="project-link link-demo">
+                        <i data-lucide="external-link"></i> Live Demo
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 3: ALLPDF Mobile -->
+            <div class="project-card" data-category="mobile">
+                <div class="card-glow" style="background: radial-gradient(800px circle at var(--x, 0) var(--y, 0), rgba(236, 72, 153, 0.15), transparent 40%);"></div>
+                <div class="project-header">
+                    <div class="project-icon icon-pink">
+                        <i data-lucide="smartphone"></i>
+                    </div>
+                    <span class="project-tag">Flutter App</span>
+                </div>
+                <h3 class="project-title">ALLPDF Mobile App</h3>
+                <p class="project-summary">A hybrid companion app for allpdf.online. Features native category listings and maps web tools in a secure container with file interceptors.</p>
+                
+                <div class="tech-tags">
+                    <span class="tech-tag">Flutter</span>
+                    <span class="tech-tag">Dart</span>
+                    <span class="tech-tag">InAppWebView</span>
+                    <span class="tech-tag">AdMob</span>
+                    <span class="tech-tag">Share API</span>
+                </div>
+
+                <div class="collapsible-details">
+                    <button class="details-toggle">
+                        <span>Key Implementation Details</span> <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="details-content">
+                        <ul>
+                            <li><strong>JS-to-Dart Download Bridge</strong>: Intercepts JS blob triggers in Webview, passes base64 files to Dart, and saves them locally.</li>
+                            <li><strong>Native Integration</strong>: Initiates native share sheets, triggers device permissions, and utilizes AdMob ads.</li>
+                            <li><strong>Offline Resilience</strong>: Connectivity_plus alerts users to tools that require active assets updates.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-links">
+                    <a href="https://github.com/fazal-khn/allpdf-mobile" target="_blank" class="project-link link-github">
+                        <i data-lucide="github"></i> GitHub
+                    </a>
+                    <span class="project-link disabled">
+                        <i data-lucide="play"></i> Android App
+                    </span>
+                </div>
+            </div>
+
+            <!-- Project 4: Pet Care Tracker -->
+            <div class="project-card" data-category="mobile">
+                <div class="card-glow" style="background: radial-gradient(800px circle at var(--x, 0) var(--y, 0), rgba(16, 185, 129, 0.15), transparent 40%);"></div>
+                <div class="project-header">
+                    <div class="project-icon icon-emerald">
+                        <i data-lucide="heart"></i>
+                    </div>
+                    <span class="project-tag">Flutter App</span>
+                </div>
+                <h3 class="project-title">Pet Care Tracker</h3>
+                <p class="project-summary">A premium pet health, activity, and calendar log app. Features beautiful glassmorphic container cards and in-app purchase subscriptions.</p>
+                
+                <div class="tech-tags">
+                    <span class="tech-tag">Flutter</span>
+                    <span class="tech-tag">Firebase Auth</span>
+                    <span class="tech-tag">fl_chart</span>
+                    <span class="tech-tag">IAP API</span>
+                    <span class="tech-tag">Local Push</span>
+                </div>
+
+                <div class="collapsible-details">
+                    <button class="details-toggle">
+                        <span>Key Implementation Details</span> <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="details-content">
+                        <ul>
+                            <li><strong>Core Integrations</strong>: Firebase Authentication, secure Google Sign-In, and local background notifications.</li>
+                            <li><strong>Interactive Data Charts</strong>: Visual charts via fl_chart displaying logs (sleep trends, weight charts, diet goals).</li>
+                            <li><strong>Paywall & AdMob</strong>: Fully configured payment gateways (IAP) and bottom AdMob integrations.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-links">
+                    <a href="https://github.com/fazal-khn/pet-care-tracker" target="_blank" class="project-link link-github">
+                        <i data-lucide="github"></i> GitHub
+                    </a>
+                    <span class="project-link disabled">
+                        <i data-lucide="play"></i> Android App
+                    </span>
+                </div>
+            </div>
+
+            <!-- Project 5: Watering Log -->
+            <div class="project-card" data-category="mobile">
+                <div class="card-glow" style="background: radial-gradient(800px circle at var(--x, 0) var(--y, 0), rgba(245, 158, 11, 0.15), transparent 40%);"></div>
+                <div class="project-header">
+                    <div class="project-icon icon-amber">
+                        <i data-lucide="droplet"></i>
+                    </div>
+                    <span class="project-tag">Flutter App</span>
+                </div>
+                <h3 class="project-title">Watering Log</h3>
+                <p class="project-summary">A botanical plant watering coordinator dashboard, featuring visual plant stats, next-watering countdowns, and plant health trackers.</p>
+                
+                <div class="tech-tags">
+                    <span class="tech-tag">Flutter</span>
+                    <span class="tech-tag">Provider</span>
+                    <span class="tech-tag">SharedPreferences</span>
+                    <span class="tech-tag">Intl</span>
+                    <span class="tech-tag">Material 3</span>
+                </div>
+
+                <div class="collapsible-details">
+                    <button class="details-toggle">
+                        <span>Key Implementation Details</span> <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="details-content">
+                        <ul>
+                            <li><strong>Custom Providers</strong>: Business logic separation (PlantProvider) handles scheduled logs and app state.</li>
+                            <li><strong>Offline Persistence</strong>: Compact JSON encoding allows saving complete collections to SharedPreferences.</li>
+                            <li><strong>Visual Analytics</strong>: Custom stat cards, health status gauges, and interval calculation logs.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-links">
+                    <a href="https://github.com/fazal-khn/watering-log" target="_blank" class="project-link link-github">
+                        <i data-lucide="github"></i> GitHub
+                    </a>
+                    <span class="project-link disabled">
+                        <i data-lucide="play"></i> Android App
+                    </span>
+                </div>
+            </div>
+
+            <!-- Project 6: ScanCraft -->
+            <div class="project-card" data-category="mobile">
+                <div class="card-glow" style="background: radial-gradient(800px circle at var(--x, 0) var(--y, 0), rgba(99, 102, 241, 0.15), transparent 40%);"></div>
+                <div class="project-header">
+                    <div class="project-icon icon-indigo">
+                        <i data-lucide="qr-code"></i>
+                    </div>
+                    <span class="project-tag">Flutter App</span>
+                </div>
+                <h3 class="project-title">ScanCraft QR App</h3>
+                <p class="project-summary">A high-speed QR and barcode scanning app, combined with customizable QR generators (links, contact cards, Wi-Fi keys, and codes).</p>
+                
+                <div class="tech-tags">
+                    <span class="tech-tag">Flutter</span>
+                    <span class="tech-tag">GetX (get)</span>
+                    <span class="tech-tag">MobileScanner</span>
+                    <span class="tech-tag">GetStorage</span>
+                    <span class="tech-tag">Gal Saver</span>
+                </div>
+
+                <div class="collapsible-details">
+                    <button class="details-toggle">
+                        <span>Key Implementation Details</span> <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="details-content">
+                        <ul>
+                            <li><strong>GetX Bindings</strong>: Reactive controllers structure state updates cleanly across QR templates.</li>
+                            <li><strong>Scanning from Camera/Gallery</strong>: MobileScanner tracks targets rapidly, supporting local image decoding.</li>
+                            <li><strong>File System Exports</strong>: The Gal library saves generated QR code matrices to user photo collections.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-links">
+                    <a href="https://github.com/fazal-khn/scancraft" target="_blank" class="project-link link-github">
+                        <i data-lucide="github"></i> GitHub
+                    </a>
+                    <span class="project-link disabled">
+                        <i data-lucide="play"></i> Android App
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills-section" id="skills">
+        <div class="section-header">
+            <h2 class="section-title">Technical Expertise</h2>
+            <p class="section-description">Languages, frameworks, and system tools I use to bring mobile and web designs to life.</p>
+        </div>
+
+        <div class="skills-container">
+            <!-- Skill Category 1 -->
+            <div class="skill-card">
+                <h3 class="skill-category-title"><i data-lucide="smartphone" class="icon-left icon-pink"></i> Mobile Engineering</h3>
+                <div class="skill-list">
+                    <div class="skill-item">Flutter</div>
+                    <div class="skill-item">Dart</div>
+                    <div class="skill-item">GetX State</div>
+                    <div class="skill-item">Provider State</div>
+                    <div class="skill-item">Android SDK</div>
+                    <div class="skill-item">iOS Deployment</div>
+                    <div class="skill-item">Local Push APIs</div>
+                </div>
+            </div>
+
+            <!-- Skill Category 2 -->
+            <div class="skill-card">
+                <h3 class="skill-category-title"><i data-lucide="globe" class="icon-left icon-cyan"></i> Web Development</h3>
+                <div class="skill-list">
+                    <div class="skill-item">React 18/19</div>
+                    <div class="skill-item">Next.js</div>
+                    <div class="skill-item">TypeScript</div>
+                    <div class="skill-item">Tailwind CSS</div>
+                    <div class="skill-item">Vite Bundler</div>
+                    <div class="skill-item">HTML5 / WASM</div>
+                    <div class="skill-item">Vanilla CSS / Flexbox</div>
+                </div>
+            </div>
+
+            <!-- Skill Category 3 -->
+            <div class="skill-card">
+                <h3 class="skill-category-title"><i data-lucide="server" class="icon-left icon-purple"></i> Backend & Database</h3>
+                <div class="skill-list">
+                    <div class="skill-item">Node.js</div>
+                    <div class="skill-item">Express</div>
+                    <div class="skill-item">Socket.io</div>
+                    <div class="skill-item">Prisma ORM</div>
+                    <div class="skill-item">PostgreSQL</div>
+                    <div class="skill-item">Redis Cache</div>
+                    <div class="skill-item">REST API Design</div>
+                </div>
+            </div>
+
+            <!-- Skill Category 4 -->
+            <div class="skill-card">
+                <h3 class="skill-category-title"><i data-lucide="cpu" class="icon-left icon-emerald"></i> Cloud & Services</h3>
+                <div class="skill-list">
+                    <div class="skill-item">Firebase Auth</div>
+                    <div class="skill-item">AdMob Integration</div>
+                    <div class="skill-item">In-App Purchases</div>
+                    <div class="skill-item">Vercel Deploy</div>
+                    <div class="skill-item">Railway Cloud</div>
+                    <div class="skill-item">Git / GitHub</div>
+                    <div class="skill-item">PWA Caching</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2 class="section-title text-left">Let's Connect</h2>
+                <p class="contact-desc">
+                    Interested in working together or want to check out my source files? Reach out via email, or explore my active code contributions directly on GitHub.
+                </p>
+                
+                <div class="contact-details">
+                    <div class="contact-detail-item">
+                        <div class="detail-icon"><i data-lucide="mail"></i></div>
+                        <div>
+                            <span class="detail-label">Email Me</span>
+                            <a href="mailto:fazal-khn@users.noreply.github.com" class="detail-value">fazal-khn@users.noreply.github.com</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-detail-item">
+                        <div class="detail-icon"><i data-lucide="github"></i></div>
+                        <div>
+                            <span class="detail-label">Follow Me</span>
+                            <a href="https://github.com/fazal-khn" target="_blank" class="detail-value">github.com/fazal-khn</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Simple Contact Card -->
+            <div class="contact-form-card">
+                <h3 class="form-title">Send a Quick Message</h3>
+                <form id="contactForm" onsubmit="event.preventDefault(); alert('Message sent! Fazal will get back to you shortly.');">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" required placeholder="john@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="4" required placeholder="Hey Fazal, let's collaborate on..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Send Message <i data-lucide="send" class="icon-right"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p class="copyright">&copy; 2026 Fazal Khan. Built with pixel-perfection using Vanilla CSS.</p>
+            <div class="footer-socials">
+                <a href="https://github.com/fazal-khn" target="_blank" aria-label="GitHub"><i data-lucide="github"></i></a>
+                <a href="mailto:fazal-khn@users.noreply.github.com" aria-label="Email"><i data-lucide="mail"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Script -->
+    <script src="index.js"></script>
+</body>
+</html>
