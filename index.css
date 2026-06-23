@@ -1149,6 +1149,7 @@ img {
                 box-shadow 0.3s ease, 
                 z-index 0.3s ease;
     transform-origin: center bottom;
+    transform: translate(var(--tx, 0px), var(--ty, 0px)) rotate(var(--rot, 0deg)) scale(var(--sc, 1));
 }
 
 .gallery-item img {
@@ -1158,57 +1159,123 @@ img {
     pointer-events: none;
 }
 
-/* Default Stacking Styles (5 cards) */
-.gallery-item[data-index="0"] {
-    transform: rotate(-8deg) translate(-15px, 8px);
+/* Default Stacking Styles (6 cards) */
+.gallery-stack .gallery-item[data-index="0"] {
+    --tx: -20px;
+    --ty: 10px;
+    --rot: -10deg;
+    --sc: 1;
     z-index: 1;
 }
 
-.gallery-item[data-index="1"] {
-    transform: rotate(-4deg) translate(-8px, 4px);
+.gallery-stack .gallery-item[data-index="1"] {
+    --tx: -12px;
+    --ty: 6px;
+    --rot: -6deg;
+    --sc: 1;
     z-index: 2;
 }
 
-.gallery-item[data-index="2"] {
-    transform: rotate(0deg) translate(0px, 0px);
+.gallery-stack .gallery-item[data-index="2"] {
+    --tx: -4px;
+    --ty: 2px;
+    --rot: -2deg;
+    --sc: 1;
     z-index: 3;
 }
 
-.gallery-item[data-index="3"] {
-    transform: rotate(4deg) translate(8px, 4px);
-    z-index: 2;
-}
-
-.gallery-item[data-index="4"] {
-    transform: rotate(8deg) translate(15px, 8px);
-    z-index: 1;
-}
-
-/* Hover Fan-out Animations (5 cards) */
-.gallery-container:hover .gallery-item[data-index="0"] {
-    transform: rotate(-20deg) translateX(-150px) translateY(-5px) scale(0.95);
-    z-index: 1;
-}
-
-.gallery-container:hover .gallery-item[data-index="1"] {
-    transform: rotate(-10deg) translateX(-75px) translateY(-3px) scale(0.98);
-    z-index: 2;
-}
-
-.gallery-container:hover .gallery-item[data-index="2"] {
-    transform: rotate(0deg) translateY(-15px) scale(1.05);
-    z-index: 5;
-    box-shadow: 0 20px 45px rgba(139, 92, 246, 0.3);
-}
-
-.gallery-container:hover .gallery-item[data-index="3"] {
-    transform: rotate(10deg) translateX(75px) translateY(-3px) scale(0.98);
+.gallery-stack .gallery-item[data-index="3"] {
+    --tx: 4px;
+    --ty: 2px;
+    --rot: 2deg;
+    --sc: 1;
     z-index: 3;
 }
 
-.gallery-container:hover .gallery-item[data-index="4"] {
-    transform: rotate(20deg) translateX(150px) translateY(-5px) scale(0.95);
+.gallery-stack .gallery-item[data-index="4"] {
+    --tx: 12px;
+    --ty: 6px;
+    --rot: 6deg;
+    --sc: 1;
+    z-index: 2;
+}
+
+.gallery-stack .gallery-item[data-index="5"] {
+    --tx: 20px;
+    --ty: 10px;
+    --rot: 10deg;
+    --sc: 1;
     z-index: 1;
+}
+
+/* Hover Fan-out Animations (6 cards) */
+.gallery-container:hover .gallery-stack .gallery-item[data-index="0"] {
+    --tx: -190px;
+    --ty: -5px;
+    --rot: -25deg;
+    --sc: 0.92;
+    z-index: 1;
+}
+
+.gallery-container:hover .gallery-stack .gallery-item[data-index="1"] {
+    --tx: -114px;
+    --ty: -3px;
+    --rot: -15deg;
+    --sc: 0.95;
+    z-index: 2;
+}
+
+.gallery-container:hover .gallery-stack .gallery-item[data-index="2"] {
+    --tx: -38px;
+    --ty: -10px;
+    --rot: -5deg;
+    --sc: 1.02;
+    z-index: 3;
+}
+
+.gallery-container:hover .gallery-stack .gallery-item[data-index="3"] {
+    --tx: 38px;
+    --ty: -10px;
+    --rot: 5deg;
+    --sc: 1.02;
+    z-index: 3;
+}
+
+.gallery-container:hover .gallery-stack .gallery-item[data-index="4"] {
+    --tx: 114px;
+    --ty: -3px;
+    --rot: 15deg;
+    --sc: 0.95;
+    z-index: 2;
+}
+
+.gallery-container:hover .gallery-stack .gallery-item[data-index="5"] {
+    --tx: 190px;
+    --ty: -5px;
+    --rot: 25deg;
+    --sc: 0.92;
+    z-index: 1;
+}
+
+/* Hover popup animation for individual hovered screen */
+.gallery-stack .gallery-item:hover {
+    --ty: -35px !important;
+    --rot: 0deg !important;
+    --sc: 1.15 !important;
+    z-index: 10 !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 
+                0 0 0 1px rgba(255, 255, 255, 0.15);
+}
+
+/* Hidden gallery items in the stack (will still cycle in the lightbox) */
+.gallery-stack .gallery-item:nth-child(n+7) {
+    opacity: 0;
+    pointer-events: none;
+    --tx: 0px !important;
+    --ty: 0px !important;
+    --rot: 0deg !important;
+    --sc: 0.9 !important;
+    z-index: 0;
 }
 
 /* Zoom Hover Indicator Overlays */
@@ -1370,20 +1437,41 @@ img {
         width: 130px;
         height: 250px;
     }
-    .gallery-container:hover .gallery-item[data-index="0"] {
-        transform: rotate(-18deg) translateX(-110px) translateY(-5px) scale(0.95);
+    .gallery-container:hover .gallery-stack .gallery-item[data-index="0"] {
+        --rot: -20deg;
+        --tx: -120px;
+        --ty: -5px;
+        --sc: 0.9;
     }
-    .gallery-container:hover .gallery-item[data-index="1"] {
-        transform: rotate(-9deg) translateX(-55px) translateY(-3px) scale(0.98);
+    .gallery-container:hover .gallery-stack .gallery-item[data-index="1"] {
+        --rot: -12deg;
+        --tx: -72px;
+        --ty: -3px;
+        --sc: 0.93;
     }
-    .gallery-container:hover .gallery-item[data-index="2"] {
-        transform: rotate(0deg) translateY(-10px) scale(1.05);
+    .gallery-container:hover .gallery-stack .gallery-item[data-index="2"] {
+        --rot: -4deg;
+        --tx: -24px;
+        --ty: -8px;
+        --sc: 1.0;
     }
-    .gallery-container:hover .gallery-item[data-index="3"] {
-        transform: rotate(9deg) translateX(55px) translateY(-3px) scale(0.98);
+    .gallery-container:hover .gallery-stack .gallery-item[data-index="3"] {
+        --rot: 4deg;
+        --tx: 24px;
+        --ty: -8px;
+        --sc: 1.0;
     }
-    .gallery-container:hover .gallery-item[data-index="4"] {
-        transform: rotate(18deg) translateX(110px) translateY(-5px) scale(0.95);
+    .gallery-container:hover .gallery-stack .gallery-item[data-index="4"] {
+        --rot: 12deg;
+        --tx: 72px;
+        --ty: -3px;
+        --sc: 0.93;
+    }
+    .gallery-container:hover .gallery-stack .gallery-item[data-index="5"] {
+        --rot: 20deg;
+        --tx: 120px;
+        --ty: -5px;
+        --sc: 0.9;
     }
     .lightbox-prev {
         left: 15px;
