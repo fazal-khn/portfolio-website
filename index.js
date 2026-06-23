@@ -52,12 +52,12 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
             navbar.style.padding = '0.9rem 2rem';
-            navbar.style.borderBottom = '1px solid rgba(255, 255, 255, 0.08)';
-            navbar.style.background = 'rgba(7, 9, 19, 0.85)';
+            navbar.style.borderBottom = '1px solid var(--card-border-hover)';
+            navbar.style.background = 'var(--bg-dark)';
         } else {
             navbar.style.padding = '1.2rem 2rem';
-            navbar.style.borderBottom = '1px solid rgba(255, 255, 255, 0.04)';
-            navbar.style.background = 'rgba(7, 9, 19, 0.7)';
+            navbar.style.borderBottom = '1px solid var(--card-border)';
+            navbar.style.background = 'transparent';
         }
     });
 
@@ -134,4 +134,37 @@ document.addEventListener('DOMContentLoaded', () => {
             card.style.setProperty('--y', `${y}px`);
         });
     });
+
+    // ───────────────────────────────────────────────────────────────
+    // DARK / LIGHT THEME TOGGLE (Default is Light)
+    // ───────────────────────────────────────────────────────────────
+    const themeToggleBtn = document.getElementById('themeToggle');
+    const themeToggleBtnMobile = document.getElementById('themeToggleMobile');
+    
+    function toggleTheme() {
+        const isDark = document.body.classList.toggle('theme-dark');
+        
+        // Update both desktop & mobile icons
+        const iconHTML = isDark ? '<i data-lucide="sun"></i>' : '<i data-lucide="moon"></i>';
+        if (themeToggleBtn) themeToggleBtn.innerHTML = iconHTML;
+        if (themeToggleBtnMobile) themeToggleBtnMobile.innerHTML = iconHTML;
+        
+        // Re-initialize icons
+        lucide.createIcons();
+        
+        // Save user preference
+        localStorage.setItem('portfolio-theme', isDark ? 'dark' : 'light');
+    }
+
+    if (themeToggleBtn) themeToggleBtn.addEventListener('click', toggleTheme);
+    if (themeToggleBtnMobile) themeToggleBtnMobile.addEventListener('click', toggleTheme);
+
+    // Load saved preference
+    const savedTheme = localStorage.getItem('portfolio-theme');
+    if (savedTheme === 'dark') {
+        document.body.classList.add('theme-dark');
+        if (themeToggleBtn) themeToggleBtn.innerHTML = '<i data-lucide="sun"></i>';
+        if (themeToggleBtnMobile) themeToggleBtnMobile.innerHTML = '<i data-lucide="sun"></i>';
+        lucide.createIcons();
+    }
 });
