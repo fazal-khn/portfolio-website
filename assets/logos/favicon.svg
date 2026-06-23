@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <!-- Accent Gradient matching the portfolio theme -->
+    <linearGradient id="favGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#4f46e5" />
+    </linearGradient>
+  </defs>
+  <!-- Rounded base -->
+  <rect width="32" height="32" rx="8" fill="url(#favGrad)"/>
+  <!-- The letter 'F' positioned elegantly -->
+  <text x="16" y="23" font-family="'Outfit', -apple-system, sans-serif" font-weight="900" font-size="20" fill="#ffffff" text-anchor="middle">F</text>
+</svg>
