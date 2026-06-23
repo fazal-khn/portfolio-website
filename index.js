@@ -132,89 +132,96 @@ document.addEventListener('DOMContentLoaded', () => {
 
             card.style.setProperty('--x', `${x}px`);
             card.style.setProperty('--y', `${y}px`);
+        });
     });
 
     // ───────────────────────────────────────────────────────────────
-    // FIGMA DESIGN SLIDER (IPHONE MOCKUP CAROUSEL)
+    // FIGMA DESIGN GALLERY & LIGHTBOX
     // ───────────────────────────────────────────────────────────────
-    const sliderContainer = document.getElementById('designSlider');
-    const prevBtn = document.getElementById('prevDesignSlide');
-    const nextBtn = document.getElementById('nextDesignSlide');
-    const indicators = document.querySelectorAll('.slider-indicators .indicator');
-    const designCard = document.querySelector('.design-card');
-    
-    if (sliderContainer && prevBtn && nextBtn) {
-        let currentSlide = 0;
-        const totalSlides = 3;
-        let autoplayTimer = null;
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const lightboxModal = document.getElementById('lightboxModal');
+    const lightboxImage = document.getElementById('lightboxImage');
+    const lightboxCaption = document.getElementById('lightboxCaption');
+    const lightboxClose = document.getElementById('lightboxClose');
+    const lightboxPrev = document.getElementById('lightboxPrev');
+    const lightboxNext = document.getElementById('lightboxNext');
 
-        function updateSlider() {
-            sliderContainer.style.transform = `translateX(-${(currentSlide * 100) / totalSlides}%)`;
-            
-            indicators.forEach((ind, index) => {
-                if (index === currentSlide) {
-                    ind.classList.add('active');
-                } else {
-                    ind.classList.remove('active');
-                }
-            });
+    if (galleryItems.length > 0 && lightboxModal) {
+        let activeGalleryIndex = 0;
+
+        function openLightbox(index) {
+            activeGalleryIndex = index;
+            const activeItem = galleryItems[activeGalleryIndex];
+            const src = activeItem.getAttribute('data-src');
+            const caption = activeItem.getAttribute('data-caption');
+
+            lightboxImage.style.opacity = '0';
+            setTimeout(() => {
+                lightboxImage.src = src;
+                lightboxCaption.textContent = caption;
+                lightboxImage.style.opacity = '1';
+            }, 150);
+
+            lightboxModal.classList.add('active');
+            lightboxModal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden'; // Stop background scroll
         }
 
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % totalSlides;
-            updateSlider();
+        function closeLightbox() {
+            lightboxModal.classList.remove('active');
+            lightboxModal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = ''; // Restore background scroll
         }
 
-        function prevSlide() {
-            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-            updateSlider();
+        function showNextImage() {
+            activeGalleryIndex = (activeGalleryIndex + 1) % galleryItems.length;
+            openLightbox(activeGalleryIndex);
         }
 
-        nextBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            nextSlide();
-            resetAutoplay();
-        });
+        function showPrevImage() {
+            activeGalleryIndex = (activeGalleryIndex - 1 + galleryItems.length) % galleryItems.length;
+            openLightbox(activeGalleryIndex);
+        }
 
-        prevBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            prevSlide();
-            resetAutoplay();
-        });
-
-        indicators.forEach((ind) => {
-            ind.addEventListener('click', (e) => {
+        galleryItems.forEach((item, index) => {
+            item.addEventListener('click', (e) => {
                 e.stopPropagation();
-                currentSlide = parseInt(ind.getAttribute('data-index'));
-                updateSlider();
-                resetAutoplay();
+                openLightbox(index);
             });
         });
 
-        function startAutoplay() {
-            if (!autoplayTimer) {
-                autoplayTimer = setInterval(nextSlide, 4500);
+        if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+
+        if (lightboxPrev) {
+            lightboxPrev.addEventListener('click', (e) => {
+                e.stopPropagation();
+                showPrevImage();
+            });
+        }
+        if (lightboxNext) {
+            lightboxNext.addEventListener('click', (e) => {
+                e.stopPropagation();
+                showNextImage();
+            });
+        }
+
+        lightboxModal.addEventListener('click', (e) => {
+            if (e.target === lightboxModal) {
+                closeLightbox();
             }
-        }
+        });
 
-        function stopAutoplay() {
-            if (autoplayTimer) {
-                clearInterval(autoplayTimer);
-                autoplayTimer = null;
+        document.addEventListener('keydown', (e) => {
+            if (!lightboxModal.classList.contains('active')) return;
+            
+            if (e.key === 'Escape') {
+                closeLightbox();
+            } else if (e.key === 'ArrowRight') {
+                showNextImage();
+            } else if (e.key === 'ArrowLeft') {
+                showPrevImage();
             }
-        }
-
-        function resetAutoplay() {
-            stopAutoplay();
-            startAutoplay();
-        }
-
-        if (designCard) {
-            designCard.addEventListener('mouseenter', stopAutoplay);
-            designCard.addEventListener('mouseleave', startAutoplay);
-        }
-
-        startAutoplay();
+        });
     }
 
     // ───────────────────────────────────────────────────────────────

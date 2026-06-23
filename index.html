@@ -561,6 +561,8 @@
                         <i data-lucide="play"></i> Android App
                     </span>
                 </div>
+            </div> <!-- Close Project 6: ScanCraft -->
+
             <!-- Project 7: Subtitle & Translation App (UI/UX) -->
             <div class="project-card design-card" data-category="design">
                 <div class="card-glow" style="background: radial-gradient(800px circle at var(--x, 0) var(--y, 0), rgba(139, 92, 246, 0.15), transparent 40%);"></div>
@@ -573,37 +575,22 @@
                 <h3 class="project-title">Subtitle & Translation App</h3>
                 <p class="project-summary">A premium mobile application designed to generate AI subtitles, customize caption styling, and translate video scripts or audio dynamically in over 50 languages.</p>
                 
-                <!-- CSS Smartphone Mockup Slider -->
-                <div class="phone-mockup">
-                    <div class="phone-speaker"></div>
-                    <div class="phone-camera"></div>
-                    <div class="phone-screen">
-                        <div class="slider-container" id="designSlider">
-                            <div class="slide active">
-                                <img src="assets/designs/onboarding1.jpg" alt="Welcome Screen">
-                            </div>
-                            <div class="slide">
-                                <img src="assets/designs/onboarding2.jpg" alt="Customize Styles Screen">
-                            </div>
-                            <div class="slide">
-                                <img src="assets/designs/onboarding3.jpg" alt="Translate Instantly Screen">
-                            </div>
+                <!-- Interactive Overlapping Cards Gallery -->
+                <div class="gallery-container">
+                    <div class="gallery-stack" id="galleryStack">
+                        <div class="gallery-item" data-index="0" data-src="assets/designs/onboarding1.jpg" data-caption="Welcome Screen">
+                            <img src="assets/designs/onboarding1.jpg" alt="Welcome Screen">
+                            <div class="gallery-overlay"><i data-lucide="zoom-in"></i></div>
                         </div>
-                        <!-- Slider Controls -->
-                        <button class="slider-btn prev-btn" id="prevDesignSlide" aria-label="Previous Slide">
-                            <i data-lucide="chevron-left"></i>
-                        </button>
-                        <button class="slider-btn next-btn" id="nextDesignSlide" aria-label="Next Slide">
-                            <i data-lucide="chevron-right"></i>
-                        </button>
-                        <!-- Slider Indicators -->
-                        <div class="slider-indicators">
-                            <span class="indicator active" data-index="0"></span>
-                            <span class="indicator" data-index="1"></span>
-                            <span class="indicator" data-index="2"></span>
+                        <div class="gallery-item" data-index="1" data-src="assets/designs/onboarding2.jpg" data-caption="Customize Styles Screen">
+                            <img src="assets/designs/onboarding2.jpg" alt="Customize Styles Screen">
+                            <div class="gallery-overlay"><i data-lucide="zoom-in"></i></div>
+                        </div>
+                        <div class="gallery-item" data-index="2" data-src="assets/designs/onboarding3.jpg" data-caption="Translate Instantly Screen">
+                            <img src="assets/designs/onboarding3.jpg" alt="Translate Instantly Screen">
+                            <div class="gallery-overlay"><i data-lucide="zoom-in"></i></div>
                         </div>
                     </div>
-                    <div class="phone-home-bar"></div>
                 </div>
 
                 <div class="tech-tags">
@@ -774,6 +761,17 @@
             </div>
         </div>
     </footer>
+
+    <!-- Lightbox Modal for Gallery Images -->
+    <div class="lightbox-modal" id="lightboxModal" aria-hidden="true">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close Lightbox"><i data-lucide="x"></i></button>
+        <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous Image"><i data-lucide="chevron-left"></i></button>
+        <div class="lightbox-content">
+            <img src="" id="lightboxImage" alt="Enlarged UI Screenshot">
+            <div class="lightbox-caption" id="lightboxCaption"></div>
+        </div>
+        <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next Image"><i data-lucide="chevron-right"></i></button>
+    </div>
 
     <!-- Custom Script -->
     <script src="index.js"></script>
