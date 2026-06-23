@@ -1396,6 +1396,77 @@ img {
     }
 }
 
+/* Browser Mockup Preview */
+.browser-mockup {
+    position: relative;
+    width: 100%;
+    border: 2px solid var(--card-border);
+    border-radius: 14px;
+    overflow: hidden;
+    background: #070913;
+    margin: 1.5rem 0;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.35);
+    transition: var(--transition-smooth);
+}
+
+.browser-header {
+    background: #151824;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0 12px;
+    border-bottom: 1px solid var(--card-border);
+}
+
+.browser-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.browser-dot.red { background: #ef4444; }
+.browser-dot.yellow { background: #eab308; }
+.browser-dot.green { background: #22c55e; }
+
+.browser-url {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    font-family: 'Fira Code', monospace;
+    margin-left: 12px;
+}
+
+.browser-body {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+
+.browser-body .gallery-item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    background: transparent;
+    transform: none !important;
+}
+
+.browser-body .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: object-position 4s ease-in-out;
+}
+
+/* Dynamic scroll simulation on hover */
+.browser-body:hover .gallery-item img {
+    object-position: bottom;
+}
+
 /* ───────────────────────────────────────────────────────────────
    RESPONSIVE DESIGN (MEDIA QUERIES)
    ─────────────────────────────────────────────────────────────── */
