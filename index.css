@@ -1,13 +1,49 @@
 :root {
     /* Premium Light Mode Palette (Default) */
     --bg-dark: #f8fafc;
-    --card-bg: rgba(255, 255, 255, 0.75);
-    --card-border: rgba(0, 0, 0, 0.06);
+    --card-bg: rgba(255, 255, 255, 0.8);
+    --card-border: rgba(0, 0, 0, 0.08);
     --card-border-hover: rgba(139, 92, 246, 0.4);
     
     --text-primary: #0f172a;
     --text-secondary: #475569;
     --text-muted: #64748b;
+
+    /* Themed element backgrounds */
+    --navbar-bg: rgba(248, 250, 252, 0.85);
+    --navbar-border: rgba(0, 0, 0, 0.06);
+    --drawer-bg: rgba(255, 255, 255, 0.97);
+    --drawer-border: rgba(0, 0, 0, 0.08);
+    --drawer-link-border: rgba(0, 0, 0, 0.06);
+    --mockup-bg: rgba(240, 242, 250, 0.9);
+    --mockup-border: rgba(0, 0, 0, 0.08);
+    --mockup-header-bg: rgba(0, 0, 0, 0.05);
+    --mockup-header-border: rgba(0, 0, 0, 0.06);
+    --contact-container-bg: rgba(255, 255, 255, 0.7);
+    --contact-container-border: rgba(0, 0, 0, 0.06);
+    --form-card-bg: rgba(241, 245, 249, 0.8);
+    --form-card-border: rgba(0, 0, 0, 0.06);
+    --input-bg: rgba(255, 255, 255, 0.9);
+    --input-border: rgba(0, 0, 0, 0.12);
+    --input-focus-bg: rgba(255, 255, 255, 1);
+    --tech-tag-bg: rgba(0, 0, 0, 0.04);
+    --tech-tag-border: rgba(0, 0, 0, 0.06);
+    --filter-tab-bg: rgba(0, 0, 0, 0.03);
+    --filter-tab-border: rgba(0, 0, 0, 0.06);
+    --filter-tab-hover-bg: rgba(0, 0, 0, 0.06);
+    --link-github-bg: rgba(0, 0, 0, 0.04);
+    --link-github-border: rgba(0, 0, 0, 0.06);
+    --link-github-hover: rgba(0, 0, 0, 0.08);
+    --skill-item-bg: rgba(0, 0, 0, 0.03);
+    --skill-item-border: rgba(0, 0, 0, 0.06);
+    --project-links-border: rgba(0, 0, 0, 0.06);
+    --collapsible-border: rgba(0, 0, 0, 0.07);
+    --footer-bg: #e2e8f0;
+    --footer-border: rgba(0, 0, 0, 0.06);
+    --scrollbar-thumb: rgba(0, 0, 0, 0.15);
+    --disabled-bg: rgba(0, 0, 0, 0.03);
+    --disabled-border: rgba(0, 0, 0, 0.04);
+    --skill-card-hover-border: rgba(0, 0, 0, 0.1);
     
     /* Neon Accents */
     --accent-purple: #7c3aed;
@@ -40,6 +76,41 @@ body.theme-dark {
     --text-primary: #f8fafc;
     --text-secondary: #94a3b8;
     --text-muted: #64748b;
+
+    --navbar-bg: rgba(7, 9, 19, 0.75);
+    --navbar-border: rgba(255, 255, 255, 0.04);
+    --drawer-bg: rgba(13, 17, 33, 0.97);
+    --drawer-border: rgba(255, 255, 255, 0.08);
+    --drawer-link-border: rgba(255, 255, 255, 0.04);
+    --mockup-bg: rgba(10, 12, 26, 0.85);
+    --mockup-border: rgba(255, 255, 255, 0.08);
+    --mockup-header-bg: rgba(0, 0, 0, 0.3);
+    --mockup-header-border: rgba(255, 255, 255, 0.04);
+    --contact-container-bg: rgba(13, 17, 33, 0.3);
+    --contact-container-border: rgba(255, 255, 255, 0.04);
+    --form-card-bg: rgba(7, 9, 19, 0.6);
+    --form-card-border: rgba(255, 255, 255, 0.06);
+    --input-bg: rgba(255, 255, 255, 0.03);
+    --input-border: rgba(255, 255, 255, 0.08);
+    --input-focus-bg: rgba(255, 255, 255, 0.05);
+    --tech-tag-bg: rgba(255, 255, 255, 0.04);
+    --tech-tag-border: rgba(255, 255, 255, 0.06);
+    --filter-tab-bg: rgba(255, 255, 255, 0.03);
+    --filter-tab-border: rgba(255, 255, 255, 0.06);
+    --filter-tab-hover-bg: rgba(255, 255, 255, 0.08);
+    --link-github-bg: rgba(255, 255, 255, 0.04);
+    --link-github-border: rgba(255, 255, 255, 0.06);
+    --link-github-hover: rgba(255, 255, 255, 0.1);
+    --skill-item-bg: rgba(255, 255, 255, 0.03);
+    --skill-item-border: rgba(255, 255, 255, 0.05);
+    --project-links-border: rgba(255, 255, 255, 0.05);
+    --collapsible-border: rgba(255, 255, 255, 0.05);
+    --footer-bg: #04050b;
+    --footer-border: rgba(255, 255, 255, 0.04);
+    --scrollbar-thumb: rgba(255, 255, 255, 0.1);
+    --disabled-bg: rgba(255, 255, 255, 0.02);
+    --disabled-border: rgba(255, 255, 255, 0.03);
+    --skill-card-hover-border: rgba(255,255,255,0.12);
     
     --accent-purple: #8b5cf6;
     --accent-cyan: #06b6d4;
@@ -111,7 +182,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--scrollbar-thumb);
     border-radius: 4px;
 }
 
@@ -283,8 +354,8 @@ img {
     left: 0;
     width: 100%;
     z-index: 1000;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-    background: rgba(7, 9, 19, 0.7);
+    border-bottom: 1px solid var(--navbar-border);
+    background: var(--navbar-bg);
     backdrop-filter: blur(20px);
     transition: var(--transition-smooth);
 }
@@ -365,14 +436,14 @@ img {
     width: 80%;
     max-width: 300px;
     height: 100vh;
-    background: rgba(13, 17, 33, 0.95);
+    background: var(--drawer-bg);
     backdrop-filter: blur(20px);
     z-index: 999;
     padding: 6rem 2rem 2rem 2rem;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    border-left: 1px solid rgba(255, 255, 255, 0.08);
+    border-left: 1px solid var(--drawer-border);
     transition: var(--transition-smooth);
 }
 
@@ -385,7 +456,7 @@ img {
     font-weight: 500;
     color: var(--text-secondary);
     padding: 0.5rem 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    border-bottom: 1px solid var(--drawer-link-border);
 }
 
 .drawer-link:hover {
@@ -465,21 +536,21 @@ img {
 .mockup-container {
     width: 100%;
     max-width: 500px;
-    background: rgba(10, 12, 26, 0.8);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: var(--mockup-bg);
+    border: 1px solid var(--mockup-border);
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.05);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.05);
     backdrop-filter: blur(20px);
 }
 
 .mockup-header {
-    background: rgba(0, 0, 0, 0.3);
+    background: var(--mockup-header-bg);
     padding: 0.8rem 1.2rem;
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    border-bottom: 1px solid var(--mockup-header-border);
 }
 
 .dot {
@@ -528,8 +599,8 @@ img {
 }
 
 .filter-tab {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    background: var(--filter-tab-bg);
+    border: 1px solid var(--filter-tab-border);
     color: var(--text-secondary);
     padding: 0.6rem 1.4rem;
     font-size: 0.9rem;
@@ -540,7 +611,7 @@ img {
 }
 
 .filter-tab:hover {
-    background: rgba(255, 255, 255, 0.08);
+    background: var(--filter-tab-hover-bg);
     color: var(--text-primary);
 }
 
@@ -644,8 +715,8 @@ img {
 }
 
 .tech-tag {
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    background: var(--tech-tag-bg);
+    border: 1px solid var(--tech-tag-border);
     color: var(--text-secondary);
     padding: 0.25rem 0.65rem;
     border-radius: 6px;
@@ -655,7 +726,7 @@ img {
 
 /* Collapsible Dropdown Details */
 .collapsible-details {
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 1px solid var(--collapsible-border);
     padding-top: 1rem;
     margin-top: auto;
 }
@@ -726,7 +797,7 @@ img {
 .project-links {
     display: flex;
     gap: 1rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 1px solid var(--project-links-border);
     padding-top: 1rem;
 }
 
@@ -746,19 +817,19 @@ img {
 }
 
 .link-github {
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    background: var(--link-github-bg);
+    border: 1px solid var(--link-github-border);
     color: var(--text-primary);
 }
 
 .link-github:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--link-github-hover);
 }
 
 .link-demo {
     background: rgba(139, 92, 246, 0.1);
     border: 1px solid rgba(139, 92, 246, 0.2);
-    color: #a78bfa;
+    color: var(--accent-purple);
 }
 
 .link-demo:hover {
@@ -768,8 +839,8 @@ img {
 .project-link.disabled {
     opacity: 0.4;
     cursor: not-allowed;
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.03);
+    background: var(--disabled-bg);
+    border: 1px solid var(--disabled-border);
     color: var(--text-muted);
 }
 
@@ -799,7 +870,7 @@ img {
 }
 
 .skill-card:hover {
-    border-color: rgba(255,255,255,0.12);
+    border-color: var(--skill-card-hover-border);
     transform: translateY(-3px);
 }
 
@@ -818,8 +889,8 @@ img {
 }
 
 .skill-item {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: var(--skill-item-bg);
+    border: 1px solid var(--skill-item-border);
     color: var(--text-secondary);
     padding: 0.5rem 1rem;
     border-radius: 8px;
@@ -849,8 +920,8 @@ img {
     grid-template-columns: 1fr 1.2fr;
     gap: 4rem;
     align-items: center;
-    background: rgba(13, 17, 33, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.04);
+    background: var(--contact-container-bg);
+    border: 1px solid var(--contact-container-border);
     border-radius: 24px;
     padding: 4rem;
     backdrop-filter: blur(20px);
@@ -885,10 +956,15 @@ img {
     height: 44px;
     border-radius: 10px;
     background: rgba(139, 92, 246, 0.1);
-    color: #a78bfa;
+    color: var(--accent-purple);
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.detail-icon.whatsapp-icon {
+    background: rgba(37, 211, 102, 0.12);
+    color: #25d366;
 }
 
 .detail-icon i {
@@ -917,8 +993,8 @@ img {
 
 /* Contact Form Card */
 .contact-form-card {
-    background: rgba(7, 9, 19, 0.6);
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    background: var(--form-card-bg);
+    border: 1px solid var(--form-card-border);
     border-radius: 16px;
     padding: 2.5rem;
 }
@@ -943,8 +1019,8 @@ img {
 
 .form-group input,
 .form-group textarea {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: var(--input-bg);
+    border: 1px solid var(--input-border);
     border-radius: 8px;
     padding: 0.8rem 1rem;
     color: var(--text-primary);
@@ -962,7 +1038,7 @@ img {
 .form-group textarea:focus {
     outline: none;
     border-color: var(--accent-purple);
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--input-focus-bg);
     box-shadow: 0 0 10px rgba(139, 92, 246, 0.15);
 }
 
@@ -970,8 +1046,8 @@ img {
    FOOTER
    ─────────────────────────────────────────────────────────────── */
 .footer {
-    border-top: 1px solid rgba(255, 255, 255, 0.04);
-    background: #04050b;
+    border-top: 1px solid var(--footer-border);
+    background: var(--footer-bg);
     padding: 2.5rem 2rem;
 }
 

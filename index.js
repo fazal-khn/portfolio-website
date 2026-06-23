@@ -53,11 +53,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (window.scrollY > 50) {
             navbar.style.padding = '0.9rem 2rem';
             navbar.style.borderBottom = '1px solid var(--card-border-hover)';
-            navbar.style.background = 'var(--bg-dark)';
+            navbar.style.background = 'var(--navbar-bg)';
         } else {
             navbar.style.padding = '1.2rem 2rem';
-            navbar.style.borderBottom = '1px solid var(--card-border)';
-            navbar.style.background = 'transparent';
+            navbar.style.borderBottom = '1px solid var(--navbar-border)';
+            navbar.style.background = 'var(--navbar-bg)';
         }
     });
 
