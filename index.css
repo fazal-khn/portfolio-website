@@ -1,49 +1,54 @@
 :root {
     /* Premium Light Mode Palette (Default) */
-    --bg-dark: #f8fafc;
-    --card-bg: rgba(255, 255, 255, 0.8);
-    --card-border: rgba(0, 0, 0, 0.08);
-    --card-border-hover: rgba(139, 92, 246, 0.4);
+    --bg-dark: #f1f5f9;
+    --card-bg: #ffffff;
+    --card-border: rgba(15, 23, 42, 0.08);
+    --card-border-hover: rgba(124, 58, 237, 0.45);
+    --card-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.05), 0 8px 10px -6px rgba(15, 23, 42, 0.05);
+    --card-shadow-hover: 0 20px 25px -5px rgba(124, 58, 237, 0.1), 0 10px 10px -5px rgba(124, 58, 237, 0.04);
     
     --text-primary: #0f172a;
     --text-secondary: #475569;
     --text-muted: #64748b;
 
     /* Themed element backgrounds */
-    --navbar-bg: rgba(248, 250, 252, 0.85);
-    --navbar-border: rgba(0, 0, 0, 0.06);
-    --drawer-bg: rgba(255, 255, 255, 0.97);
-    --drawer-border: rgba(0, 0, 0, 0.08);
-    --drawer-link-border: rgba(0, 0, 0, 0.06);
-    --mockup-bg: rgba(240, 242, 250, 0.9);
-    --mockup-border: rgba(0, 0, 0, 0.08);
-    --mockup-header-bg: rgba(0, 0, 0, 0.05);
+    --navbar-bg: rgba(241, 245, 249, 0.85);
+    --navbar-border: rgba(15, 23, 42, 0.06);
+    --drawer-bg: rgba(255, 255, 255, 0.98);
+    --drawer-border: rgba(15, 23, 42, 0.08);
+    --drawer-link-border: rgba(15, 23, 42, 0.06);
+    --mockup-bg: rgba(255, 255, 255, 0.9);
+    --mockup-border: rgba(15, 23, 42, 0.08);
+    --mockup-header-bg: rgba(0, 0, 0, 0.04);
     --mockup-header-border: rgba(0, 0, 0, 0.06);
-    --contact-container-bg: rgba(255, 255, 255, 0.7);
-    --contact-container-border: rgba(0, 0, 0, 0.06);
-    --form-card-bg: rgba(241, 245, 249, 0.8);
-    --form-card-border: rgba(0, 0, 0, 0.06);
-    --input-bg: rgba(255, 255, 255, 0.9);
-    --input-border: rgba(0, 0, 0, 0.12);
-    --input-focus-bg: rgba(255, 255, 255, 1);
-    --tech-tag-bg: rgba(0, 0, 0, 0.04);
-    --tech-tag-border: rgba(0, 0, 0, 0.06);
-    --filter-tab-bg: rgba(0, 0, 0, 0.03);
-    --filter-tab-border: rgba(0, 0, 0, 0.06);
-    --filter-tab-hover-bg: rgba(0, 0, 0, 0.06);
-    --link-github-bg: rgba(0, 0, 0, 0.04);
-    --link-github-border: rgba(0, 0, 0, 0.06);
-    --link-github-hover: rgba(0, 0, 0, 0.08);
-    --skill-item-bg: rgba(0, 0, 0, 0.03);
-    --skill-item-border: rgba(0, 0, 0, 0.06);
-    --project-links-border: rgba(0, 0, 0, 0.06);
-    --collapsible-border: rgba(0, 0, 0, 0.07);
+    --contact-container-bg: #ffffff;
+    --contact-container-border: rgba(15, 23, 42, 0.08);
+    --form-card-bg: #f8fafc;
+    --form-card-border: rgba(15, 23, 42, 0.06);
+    --input-bg: #ffffff;
+    --input-border: rgba(15, 23, 42, 0.12);
+    --input-focus-bg: #ffffff;
+    --tech-tag-bg: rgba(15, 23, 42, 0.04);
+    --tech-tag-border: rgba(15, 23, 42, 0.06);
+    --filter-tab-bg: rgba(15, 23, 42, 0.03);
+    --filter-tab-border: rgba(15, 23, 42, 0.06);
+    --filter-tab-hover-bg: rgba(15, 23, 42, 0.06);
+    --link-github-bg: rgba(15, 23, 42, 0.04);
+    --link-github-border: rgba(15, 23, 42, 0.06);
+    --link-github-hover: rgba(15, 23, 42, 0.08);
+    --skill-item-bg: rgba(15, 23, 42, 0.03);
+    --skill-item-border: rgba(15, 23, 42, 0.06);
+    --project-links-border: rgba(15, 23, 42, 0.06);
+    --collapsible-border: rgba(15, 23, 42, 0.07);
     --footer-bg: #e2e8f0;
-    --footer-border: rgba(0, 0, 0, 0.06);
-    --scrollbar-thumb: rgba(0, 0, 0, 0.15);
-    --disabled-bg: rgba(0, 0, 0, 0.03);
-    --disabled-border: rgba(0, 0, 0, 0.04);
-    --skill-card-hover-border: rgba(0, 0, 0, 0.1);
+    --footer-border: rgba(15, 23, 42, 0.06);
+    --scrollbar-thumb: rgba(15, 23, 42, 0.15);
+    --disabled-bg: rgba(15, 23, 42, 0.03);
+    --disabled-border: rgba(15, 23, 42, 0.04);
+    --skill-card-hover-border: rgba(15, 23, 42, 0.1);
+    --btn-outline-border: rgba(15, 23, 42, 0.18);
+    --btn-outline-hover-border: rgba(124, 58, 237, 0.6);
+    --btn-outline-hover-bg: rgba(124, 58, 237, 0.06);
     
     /* Neon Accents */
     --accent-purple: #7c3aed;
@@ -72,6 +77,8 @@ body.theme-dark {
     --card-bg: rgba(13, 17, 33, 0.45);
     --card-border: rgba(255, 255, 255, 0.06);
     --card-border-hover: rgba(139, 92, 246, 0.3);
+    --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    --card-shadow-hover: 0 15px 35px rgba(0, 0, 0, 0.4), 0 0 25px rgba(139, 92, 246, 0.08);
     
     --text-primary: #f8fafc;
     --text-secondary: #94a3b8;
@@ -111,6 +118,9 @@ body.theme-dark {
     --disabled-bg: rgba(255, 255, 255, 0.02);
     --disabled-border: rgba(255, 255, 255, 0.03);
     --skill-card-hover-border: rgba(255,255,255,0.12);
+    --btn-outline-border: rgba(255, 255, 255, 0.15);
+    --btn-outline-hover-border: rgba(255, 255, 255, 0.3);
+    --btn-outline-hover-bg: rgba(255, 255, 255, 0.05);
     
     --accent-purple: #8b5cf6;
     --accent-cyan: #06b6d4;
@@ -285,13 +295,13 @@ img {
 .btn-outline {
     background: transparent;
     color: var(--text-primary);
-    border-color: rgba(255, 255, 255, 0.15);
+    border-color: var(--btn-outline-border);
     backdrop-filter: blur(8px);
 }
 
 .btn-outline:hover {
-    background: rgba(255, 255, 255, 0.05);
-    border-color: rgba(255, 255, 255, 0.3);
+    background: var(--btn-outline-hover-bg);
+    border-color: var(--btn-outline-hover-border);
     transform: translateY(-2px);
 }
 
@@ -642,13 +652,14 @@ img {
     position: relative;
     overflow: hidden;
     backdrop-filter: blur(16px);
+    box-shadow: var(--card-shadow);
     transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.4s ease;
 }
 
 .project-card:hover {
     transform: translateY(-5px);
     border-color: var(--card-border-hover);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3), 0 0 25px rgba(139, 92, 246, 0.08);
+    box-shadow: var(--card-shadow-hover);
 }
 
 /* Mouse Follow Glow Container */
@@ -866,11 +877,13 @@ img {
     border-radius: 16px;
     padding: 2rem;
     backdrop-filter: blur(16px);
+    box-shadow: var(--card-shadow);
     transition: var(--transition-smooth);
 }
 
 .skill-card:hover {
     border-color: var(--skill-card-hover-border);
+    box-shadow: var(--card-shadow-hover);
     transform: translateY(-3px);
 }
 
@@ -925,6 +938,7 @@ img {
     border-radius: 24px;
     padding: 4rem;
     backdrop-filter: blur(20px);
+    box-shadow: var(--card-shadow);
 }
 
 .contact-info {
