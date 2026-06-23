@@ -126,6 +126,7 @@
                 <button class="filter-tab active" data-filter="all">All Projects</button>
                 <button class="filter-tab" data-filter="web">Web Platforms</button>
                 <button class="filter-tab" data-filter="mobile">Flutter Apps</button>
+                <button class="filter-tab" data-filter="design">UI/UX Designs</button>
             </div>
         </div>
 
@@ -559,6 +560,80 @@
                     <span class="project-link disabled">
                         <i data-lucide="play"></i> Android App
                     </span>
+                </div>
+            <!-- Project 7: Subtitle & Translation App (UI/UX) -->
+            <div class="project-card design-card" data-category="design">
+                <div class="card-glow" style="background: radial-gradient(800px circle at var(--x, 0) var(--y, 0), rgba(139, 92, 246, 0.15), transparent 40%);"></div>
+                <div class="project-header">
+                    <div class="project-icon icon-purple" style="background: none;">
+                        <i data-lucide="figma"></i>
+                    </div>
+                    <span class="project-tag">UI/UX Figma Design</span>
+                </div>
+                <h3 class="project-title">Subtitle & Translation App</h3>
+                <p class="project-summary">A premium mobile application designed to generate AI subtitles, customize caption styling, and translate video scripts or audio dynamically in over 50 languages.</p>
+                
+                <!-- CSS Smartphone Mockup Slider -->
+                <div class="phone-mockup">
+                    <div class="phone-speaker"></div>
+                    <div class="phone-camera"></div>
+                    <div class="phone-screen">
+                        <div class="slider-container" id="designSlider">
+                            <div class="slide active">
+                                <img src="assets/designs/onboarding1.jpg" alt="Welcome Screen">
+                            </div>
+                            <div class="slide">
+                                <img src="assets/designs/onboarding2.jpg" alt="Customize Styles Screen">
+                            </div>
+                            <div class="slide">
+                                <img src="assets/designs/onboarding3.jpg" alt="Translate Instantly Screen">
+                            </div>
+                        </div>
+                        <!-- Slider Controls -->
+                        <button class="slider-btn prev-btn" id="prevDesignSlide" aria-label="Previous Slide">
+                            <i data-lucide="chevron-left"></i>
+                        </button>
+                        <button class="slider-btn next-btn" id="nextDesignSlide" aria-label="Next Slide">
+                            <i data-lucide="chevron-right"></i>
+                        </button>
+                        <!-- Slider Indicators -->
+                        <div class="slider-indicators">
+                            <span class="indicator active" data-index="0"></span>
+                            <span class="indicator" data-index="1"></span>
+                            <span class="indicator" data-index="2"></span>
+                        </div>
+                    </div>
+                    <div class="phone-home-bar"></div>
+                </div>
+
+                <div class="tech-tags">
+                    <span class="tech-tag">Figma</span>
+                    <span class="tech-tag">Mobile UI/UX</span>
+                    <span class="tech-tag">Caption Master</span>
+                    <span class="tech-tag">Interactive Prototyping</span>
+                    <span class="tech-tag">Autoplay Slider</span>
+                </div>
+
+                <div class="collapsible-details">
+                    <button class="details-toggle">
+                        <span>Key UX Decisions</span> <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="details-content">
+                        <ul>
+                            <li><strong>Dynamic Onboarding Flow</strong>: Simplified the introduction of complex AI captioning tools through structured, interactive onboarding slides.</li>
+                            <li><strong>Glassmorphic Card Modules</strong>: Implemented card overlays with dynamic visual weight and high contrast parameters for outdoor readability.</li>
+                            <li><strong>Streamlined Script Translations</strong>: Structured standard flags and clear interactive grids for seamless translation target configurations.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-links">
+                    <a href="https://www.figma.com/proto/MKzYurzYMpTSZ95oeYTW3Y/Translation-App--Copy---Copy---Copy-?node-id=0-1&t=gzaZ9ujLsjE3UhKS-1" target="_blank" class="project-link link-demo">
+                        <i data-lucide="play"></i> Play Prototype
+                    </a>
+                    <a href="https://www.figma.com/file/MKzYurzYMpTSZ95oeYTW3Y/Translation-App--Copy---Copy---Copy-" target="_blank" class="project-link link-github">
+                        <i data-lucide="external-link"></i> Figma File
+                    </a>
                 </div>
             </div>
 

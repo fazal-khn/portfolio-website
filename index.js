@@ -132,8 +132,90 @@ document.addEventListener('DOMContentLoaded', () => {
 
             card.style.setProperty('--x', `${x}px`);
             card.style.setProperty('--y', `${y}px`);
-        });
     });
+
+    // ───────────────────────────────────────────────────────────────
+    // FIGMA DESIGN SLIDER (IPHONE MOCKUP CAROUSEL)
+    // ───────────────────────────────────────────────────────────────
+    const sliderContainer = document.getElementById('designSlider');
+    const prevBtn = document.getElementById('prevDesignSlide');
+    const nextBtn = document.getElementById('nextDesignSlide');
+    const indicators = document.querySelectorAll('.slider-indicators .indicator');
+    const designCard = document.querySelector('.design-card');
+    
+    if (sliderContainer && prevBtn && nextBtn) {
+        let currentSlide = 0;
+        const totalSlides = 3;
+        let autoplayTimer = null;
+
+        function updateSlider() {
+            sliderContainer.style.transform = `translateX(-${(currentSlide * 100) / totalSlides}%)`;
+            
+            indicators.forEach((ind, index) => {
+                if (index === currentSlide) {
+                    ind.classList.add('active');
+                } else {
+                    ind.classList.remove('active');
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateSlider();
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateSlider();
+        }
+
+        nextBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            nextSlide();
+            resetAutoplay();
+        });
+
+        prevBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            prevSlide();
+            resetAutoplay();
+        });
+
+        indicators.forEach((ind) => {
+            ind.addEventListener('click', (e) => {
+                e.stopPropagation();
+                currentSlide = parseInt(ind.getAttribute('data-index'));
+                updateSlider();
+                resetAutoplay();
+            });
+        });
+
+        function startAutoplay() {
+            if (!autoplayTimer) {
+                autoplayTimer = setInterval(nextSlide, 4500);
+            }
+        }
+
+        function stopAutoplay() {
+            if (autoplayTimer) {
+                clearInterval(autoplayTimer);
+                autoplayTimer = null;
+            }
+        }
+
+        function resetAutoplay() {
+            stopAutoplay();
+            startAutoplay();
+        }
+
+        if (designCard) {
+            designCard.addEventListener('mouseenter', stopAutoplay);
+            designCard.addEventListener('mouseleave', startAutoplay);
+        }
+
+        startAutoplay();
+    }
 
     // ───────────────────────────────────────────────────────────────
     // DARK / LIGHT THEME TOGGLE (Default is Light)
