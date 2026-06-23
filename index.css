@@ -10,6 +10,7 @@
     --text-primary: #0f172a;
     --text-secondary: #475569;
     --text-muted: #64748b;
+    --link-demo-color: #7c3aed;
 
     /* Themed element backgrounds */
     --navbar-bg: rgba(241, 245, 249, 0.85);
@@ -81,8 +82,9 @@ body.theme-dark {
     --card-shadow-hover: 0 15px 35px rgba(0, 0, 0, 0.4), 0 0 25px rgba(139, 92, 246, 0.08);
     
     --text-primary: #f8fafc;
-    --text-secondary: #94a3b8;
-    --text-muted: #64748b;
+    --text-secondary: #cbd5e1;
+    --text-muted: #8a9cb0;
+    --link-demo-color: #c084fc;
 
     --navbar-bg: rgba(7, 9, 19, 0.75);
     --navbar-border: rgba(255, 255, 255, 0.04);
@@ -840,7 +842,7 @@ img {
 .link-demo {
     background: rgba(139, 92, 246, 0.1);
     border: 1px solid rgba(139, 92, 246, 0.2);
-    color: var(--accent-purple);
+    color: var(--link-demo-color);
 }
 
 .link-demo:hover {
