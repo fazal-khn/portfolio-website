@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <!-- Amber/Orange gradient representing sticky notes -->
+    <linearGradient id="noteGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="2" stdDeviation="1.5" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  <!-- Background glass border -->
+  <rect x="5" y="5" width="90" height="90" rx="20" fill="none" stroke="url(#noteGrad)" stroke-width="2" opacity="0.3"/>
+  
+  <!-- Back Sticky Note -->
+  <g transform="rotate(-5 50 50)">
+    <rect x="25" y="25" width="46" height="46" rx="4" fill="#ffffff" fill-opacity="0.15" stroke="url(#noteGrad)" stroke-width="2"/>
+  </g>
+  
+  <!-- Front Sticky Note (Main) -->
+  <g filter="url(#shadow)">
+    <rect x="34" y="32" width="44" height="44" rx="4" fill="url(#noteGrad)" />
+    <!-- Folded corner effect -->
+    <path d="M 78,64 L 68,76 L 68,64 Z" fill="#b45309"/>
+    <path d="M 78,64 L 68,64 L 68,76" fill="#fef3c7" opacity="0.5"/>
+  </g>
+  
+  <!-- Grid scribble lines on sticky note -->
+  <line x1="42" y1="42" x2="68" y2="42" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
+  <line x1="42" y1="50" x2="62" y2="50" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
+  <line x1="42" y1="58" x2="56" y2="58" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
+</svg>

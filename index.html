@@ -257,6 +257,136 @@
                 </div>
             </div>
 
+            <!-- Project 4: Zero-Data-Leak Translator -->
+            <div class="project-card" data-category="web">
+                <div class="card-glow" style="background: radial-gradient(800px circle at var(--x, 0) var(--y, 0), rgba(6, 182, 212, 0.15), transparent 40%);"></div>
+                <div class="project-header">
+                    <div class="project-icon" style="background: none;">
+                        <img src="assets/logos/translator.svg" alt="Zero-Data-Leak Translator Logo" style="width:100%; height:100%; object-fit:contain;">
+                    </div>
+                    <span class="project-tag">Web Platform</span>
+                </div>
+                <h3 class="project-title">Offline Document Translator</h3>
+                <p class="project-summary">A 100% private document translation suite running translation models fully client-side. Eliminates data leaks when converting sensitive business documents.</p>
+                
+                <div class="tech-tags">
+                    <span class="tech-tag">React 18</span>
+                    <span class="tech-tag">Transformers.js</span>
+                    <span class="tech-tag">ONNX Runtime</span>
+                    <span class="tech-tag">Tailwind CSS</span>
+                    <span class="tech-tag">Mammoth.js</span>
+                </div>
+
+                <div class="collapsible-details">
+                    <button class="details-toggle">
+                        <span>Key Implementation Details</span> <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="details-content">
+                        <ul>
+                            <li><strong>Offline ML Engine</strong>: Loads Meta's NLLB-200 distilled translation models client-side with ONNX WebAssembly.</li>
+                            <li><strong>Zero Data Leakage</strong>: All translation processes happen purely within the sandbox threads of the browser with no server uploads.</li>
+                            <li><strong>Docx/PDF Parsing</strong>: Extracts text layout blocks dynamically using mammoth.js and pdfjs-dist, preserving document structure.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-links">
+                    <a href="https://github.com/fazal-khn/offline-translator" target="_blank" class="project-link link-github">
+                        <i data-lucide="github"></i> GitHub
+                    </a>
+                    <a href="https://offline-translator.vercel.app" target="_blank" class="project-link link-demo">
+                        <i data-lucide="external-link"></i> Live Demo
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 5: VoiceAI -->
+            <div class="project-card" data-category="web">
+                <div class="card-glow" style="background: radial-gradient(800px circle at var(--x, 0) var(--y, 0), rgba(139, 92, 246, 0.15), transparent 40%);"></div>
+                <div class="project-header">
+                    <div class="project-icon" style="background: none;">
+                        <img src="assets/logos/voiceai.svg" alt="VoiceAI Logo" style="width:100%; height:100%; object-fit:contain;">
+                    </div>
+                    <span class="project-tag">Web Platform</span>
+                </div>
+                <h3 class="project-title">VoiceAI</h3>
+                <p class="project-summary">An advanced AI voice generation and text-to-speech platform. Supports cloning voices from audio clips and synthesizing custom video voiceovers.</p>
+                
+                <div class="tech-tags">
+                    <span class="tech-tag">Next.js 14</span>
+                    <span class="tech-tag">React 19</span>
+                    <span class="tech-tag">TypeScript</span>
+                    <span class="tech-tag">Express</span>
+                    <span class="tech-tag">Supabase</span>
+                    <span class="tech-tag">BullMQ</span>
+                </div>
+
+                <div class="collapsible-details">
+                    <button class="details-toggle">
+                        <span>Key Implementation Details</span> <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="details-content">
+                        <ul>
+                            <li><strong>Audio Synthesis Engine</strong>: Harnesses advanced speech cloning APIs to render high-fidelity character voices.</li>
+                            <li><strong>Scaling Task Queue</strong>: Utilizes Express and Redis-backed BullMQ to coordinate asynchronous audio processing workloads.</li>
+                            <li><strong>Supabase Integration</strong>: Secure database architecture handles voice metadata, authentication states, and storage buckets.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-links">
+                    <a href="https://github.com/fazal-khn/voicesite" target="_blank" class="project-link link-github">
+                        <i data-lucide="github"></i> GitHub
+                    </a>
+                    <a href="https://voicesite.vercel.app/" target="_blank" class="project-link link-demo">
+                        <i data-lucide="external-link"></i> Live Demo
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 5: OverlayNotes -->
+            <div class="project-card" data-category="web">
+                <div class="card-glow" style="background: radial-gradient(800px circle at var(--x, 0) var(--y, 0), rgba(245, 158, 11, 0.15), transparent 40%);"></div>
+                <div class="project-header">
+                    <div class="project-icon" style="background: none;">
+                        <img src="assets/logos/overlaynotes.svg" alt="OverlayNotes Logo" style="width:100%; height:100%; object-fit:contain;">
+                    </div>
+                    <span class="project-tag">Desktop & Extension</span>
+                </div>
+                <h3 class="project-title">OverlayNotes</h3>
+                <p class="project-summary">A quick side-panel memo widget. Integrated both as a lightweight Rust Tauri desktop application overlay and a Chrome side panel extension.</p>
+                
+                <div class="tech-tags">
+                    <span class="tech-tag">Tauri</span>
+                    <span class="tech-tag">Chrome Ext API</span>
+                    <span class="tech-tag">HTML5 / CSS3</span>
+                    <span class="tech-tag">Vanilla JS</span>
+                    <span class="tech-tag">Rust</span>
+                </div>
+
+                <div class="collapsible-details">
+                    <button class="details-toggle">
+                        <span>Key Implementation Details</span> <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="details-content">
+                        <ul>
+                            <li><strong>Multi-Distribution Core</strong>: Shared CSS/JS core deployed simultaneously to a Tauri window container and Chrome sidePanel.</li>
+                            <li><strong>Auto-Save Drafts</strong>: Integrates with browser storage APIs to capture logs, checklists, and notes in real-time.</li>
+                            <li><strong>Minimal Overlay Interface</strong>: Native floating behavior allows drafting items without losing tab or viewport focus.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-links">
+                    <a href="https://github.com/fazal-khn/advanced-sticky-notes" target="_blank" class="project-link link-github">
+                        <i data-lucide="github"></i> GitHub
+                    </a>
+                    <span class="project-link disabled">
+                        <i data-lucide="box"></i> Packaged App
+                    </span>
+                </div>
+            </div>
+
             <!-- Project 3: ALLPDF Mobile -->
             <div class="project-card" data-category="mobile">
                 <div class="card-glow" style="background: radial-gradient(800px circle at var(--x, 0) var(--y, 0), rgba(236, 72, 153, 0.15), transparent 40%);"></div>
