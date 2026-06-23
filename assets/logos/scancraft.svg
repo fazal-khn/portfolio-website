@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="scanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1" />
+      <stop offset="100%" stop-color="#4f46e5" />
+    </linearGradient>
+  </defs>
+  <rect width="100" height="100" rx="22" fill="url(#scanGrad)" />
+  <!-- QR Code minimal box outline + scan line -->
+  <path d="M30 30h16v16H30zm4 4v8h8v-8zm20-4h16v16H54zm4 4v8h8v-8zM30 54h16v16H30zm4 4v8h8v-8zm24-4h4v4h-4zm8 0h4v4h-4zm-8 8h4v4h-4zm4 4h4v4h-4zm4-4h4v4h-4zm4 8h4v4h-4z" fill="#ffffff" />
+  <rect x="24" y="48" width="52" height="4" rx="2" fill="#ef4444" />
+</svg>

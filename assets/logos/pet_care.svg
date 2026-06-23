@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="petGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+  </defs>
+  <rect width="100" height="100" rx="22" fill="url(#petGrad)" />
+  <!-- Heart + Paw print representation -->
+  <path d="M50 72c-1.5 0-2.8-.7-3.8-1.8L35.5 59.5c-4-4.2-4-10.8 0-15s10.5-4.2 14.5 0c4-4.2 10.5-4.2 14.5 0s4 10.8 0 15L53.8 70.2c-1 1.1-2.3 1.8-3.8 1.8z" fill="#ffffff" />
+  <circle cx="38" cy="34" r="5" fill="#ffffff" />
+  <circle cx="50" cy="27" r="5" fill="#ffffff" />
+  <circle cx="62" cy="34" r="5" fill="#ffffff" />
+</svg>
