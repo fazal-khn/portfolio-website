@@ -1143,12 +1143,71 @@ img {
     }
     
     .projects-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     }
     
     .footer-container {
         flex-direction: column;
         gap: 1.5rem;
         text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 6rem 1rem 3rem 1rem;
+        gap: 2rem;
+    }
+    
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .hero-actions {
+        flex-direction: column;
+        gap: 0.8rem;
+        width: 100%;
+    }
+    
+    .hero-actions .btn {
+        width: 100%;
+    }
+    
+    .nav-container {
+        padding: 1rem;
+    }
+    
+    .projects-section, .skills-section, .contact-section {
+        padding: 4rem 1rem;
+    }
+    
+    .contact-container {
+        padding: 1.5rem;
+        border-radius: 16px;
+    }
+    
+    .contact-form-card {
+        padding: 1.5rem;
+        border-radius: 12px;
+    }
+    
+    .mockup-body {
+        padding: 1rem;
+    }
+    
+    .mockup-body pre {
+        font-size: 0.75rem;
+    }
+    
+    .project-card {
+        padding: 1.5rem;
+    }
+    
+    .skill-card {
+        padding: 1.5rem;
     }
 }
