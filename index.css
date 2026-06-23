@@ -812,6 +812,7 @@ img {
     gap: 1rem;
     border-top: 1px solid var(--project-links-border);
     padding-top: 1rem;
+    margin-top: auto; /* Push links to the bottom for uniform alignment */
 }
 
 .project-link {
@@ -1098,9 +1099,18 @@ img {
 /* ───────────────────────────────────────────────────────────────
    INTERACTIVE FAN-OUT GALLERY & LIGHTBOX
    ─────────────────────────────────────────────────────────────── */
-.design-card {
-    display: flex;
-    flex-direction: column;
+.project-card.design-card {
+    grid-column: 1 / -1;
+    overflow: visible;
+}
+
+@media (min-width: 769px) {
+    .project-card.design-card {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 3.5rem;
+        align-items: center;
+    }
 }
 
 .gallery-container {
@@ -1126,12 +1136,12 @@ img {
 
 .gallery-item {
     position: absolute;
-    width: 160px;
-    height: 310px;
-    border-radius: 20px;
+    width: 155px;
+    height: 300px;
+    border-radius: 18px;
     border: 3px solid #1a1a24;
     overflow: hidden;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), 
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4), 
                 0 0 0 1px rgba(255, 255, 255, 0.05);
     background: #070913;
     transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
@@ -1147,37 +1157,57 @@ img {
     pointer-events: none;
 }
 
-/* Default Stacking Styles */
+/* Default Stacking Styles (5 cards) */
 .gallery-item[data-index="0"] {
-    transform: rotate(-6deg) translate(-10px, 5px);
+    transform: rotate(-8deg) translate(-15px, 8px);
     z-index: 1;
 }
 
 .gallery-item[data-index="1"] {
-    transform: rotate(2deg) translate(5px, -5px);
-    z-index: 3;
-}
-
-.gallery-item[data-index="2"] {
-    transform: rotate(-2deg) translate(0px, 0px);
+    transform: rotate(-4deg) translate(-8px, 4px);
     z-index: 2;
 }
 
-/* Hover Fan-out Animations */
+.gallery-item[data-index="2"] {
+    transform: rotate(0deg) translate(0px, 0px);
+    z-index: 3;
+}
+
+.gallery-item[data-index="3"] {
+    transform: rotate(4deg) translate(8px, 4px);
+    z-index: 2;
+}
+
+.gallery-item[data-index="4"] {
+    transform: rotate(8deg) translate(15px, 8px);
+    z-index: 1;
+}
+
+/* Hover Fan-out Animations (5 cards) */
 .gallery-container:hover .gallery-item[data-index="0"] {
-    transform: rotate(-14deg) translateX(-105px) translateY(-5px) scale(0.98);
+    transform: rotate(-20deg) translateX(-150px) translateY(-5px) scale(0.95);
     z-index: 1;
 }
 
 .gallery-container:hover .gallery-item[data-index="1"] {
-    transform: rotate(0deg) translateY(-15px) scale(1.05);
-    z-index: 3;
-    box-shadow: 0 20px 45px rgba(139, 92, 246, 0.25);
+    transform: rotate(-10deg) translateX(-75px) translateY(-3px) scale(0.98);
+    z-index: 2;
 }
 
 .gallery-container:hover .gallery-item[data-index="2"] {
-    transform: rotate(14deg) translateX(105px) translateY(-5px) scale(0.98);
-    z-index: 2;
+    transform: rotate(0deg) translateY(-15px) scale(1.05);
+    z-index: 5;
+    box-shadow: 0 20px 45px rgba(139, 92, 246, 0.3);
+}
+
+.gallery-container:hover .gallery-item[data-index="3"] {
+    transform: rotate(10deg) translateX(75px) translateY(-3px) scale(0.98);
+    z-index: 3;
+}
+
+.gallery-container:hover .gallery-item[data-index="4"] {
+    transform: rotate(20deg) translateX(150px) translateY(-5px) scale(0.95);
+    z-index: 1;
 }
 
 /* Zoom Hover Indicator Overlays */
@@ -1340,13 +1370,19 @@ img {
         height: 250px;
     }
     .gallery-container:hover .gallery-item[data-index="0"] {
-        transform: rotate(-12deg) translateX(-70px) translateY(-5px) scale(0.98);
+        transform: rotate(-18deg) translateX(-110px) translateY(-5px) scale(0.95);
     }
     .gallery-container:hover .gallery-item[data-index="1"] {
-        transform: rotate(0deg) translateY(-10px) scale(1.05);
+        transform: rotate(-9deg) translateX(-55px) translateY(-3px) scale(0.98);
     }
     .gallery-container:hover .gallery-item[data-index="2"] {
-        transform: rotate(12deg) translateX(70px) translateY(-5px) scale(0.98);
+        transform: rotate(0deg) translateY(-10px) scale(1.05);
+    }
+    .gallery-container:hover .gallery-item[data-index="3"] {
+        transform: rotate(9deg) translateX(55px) translateY(-3px) scale(0.98);
+    }
+    .gallery-container:hover .gallery-item[data-index="4"] {
+        transform: rotate(18deg) translateX(110px) translateY(-5px) scale(0.95);
     }
     .lightbox-prev {
         left: 15px;
